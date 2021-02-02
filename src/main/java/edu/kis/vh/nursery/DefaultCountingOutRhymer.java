@@ -4,10 +4,11 @@ public class DefaultCountingOutRhymer {
 
 	private static final int TAB_SIZE = 12;
 	private static final int TOTAL = 11;
-	private static final int CHECK = -1;
-	private int[] numbers = new int[TAB_SIZE];
+	private static final int INITIAL = -1;
+	private static final int RETURN = -1;
+	private final int[] numbers = new int[TAB_SIZE];
 
-	public int total = CHECK;
+	public int total = INITIAL;
 
 	public void countIn(int in) {
 		if (!isFull())
@@ -15,7 +16,7 @@ public class DefaultCountingOutRhymer {
 	}
 
 	public boolean callCheck() {
-			return total == -1;
+			return total == INITIAL;
 		}
 		
 	public boolean isFull() {
@@ -24,7 +25,7 @@ public class DefaultCountingOutRhymer {
 
 	protected int peekaboo() {
 		if (callCheck()) {
-			return CHECK;
+			return RETURN;
 		} else {
 			return numbers[total];
 		}
@@ -32,7 +33,7 @@ public class DefaultCountingOutRhymer {
 
 	public int countOut() {
 		if (callCheck()) {
-			return CHECK;
+			return RETURN;
 		} else {
 			return numbers[total--];
 		}
