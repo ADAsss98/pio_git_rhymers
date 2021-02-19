@@ -4,11 +4,11 @@ public class DefaultCountingOutRhymer {
 
 	private static final int TAB_SIZE = 12;
 	private static final int LAST_TABLE_INDEX = TAB_SIZE -1;
-	private int INITIAL = -1;
+	private static int INITIAL = -1;
 	private static final int RETURN_VALUE = -1;
 	private final int[] numbers = new int[TAB_SIZE];
 
-	public int getINITIAL() {
+	public int getInitial() {
 		return INITIAL;
 	}
 
